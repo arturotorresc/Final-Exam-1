@@ -1,33 +1,18 @@
-import React from 'react';
-import './App.css';
-import Book from './Book';
-import BookForm from './BookForm';
+import React, { useState } from "react";
+import "./App.css";
+import Book from "./Book";
+import BookForm from "./BookForm";
 
-class App extends React.Component{
-
-  constructor( props ){
-    super( props );
-    this.state = {
-      /*
-        Your code goes here
-      */
-    }
-  }
-
-  /* 
-    Your code goes here
-  */
-
-  render(){
-    return(
-      <div>
-        {/* 
-          Your code goes here
-        */}
-      </div>
-    )
-  }
-
+function App(props) {
+  const [books, setBooks] = useState([]);
+  return (
+    <div>
+      <h1>Client Coding Challenge</h1>
+      <h2>By Arturo Torres - A01176590</h2>
+      <BookForm setBooks={setBooks} />
+      <Book books={books} />
+    </div>
+  );
 }
 
 export default App;
